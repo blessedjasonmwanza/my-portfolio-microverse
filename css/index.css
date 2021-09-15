@@ -14,7 +14,6 @@ body * {
 }
 
 .top-header {
-  display: flex;
   position: fixed;
   height: var(--top-header-height);
   background: #fff;
@@ -34,6 +33,7 @@ body * {
   font-weight: 600;
   font-size: 20px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .mobile-nav-trigger {
@@ -47,7 +47,6 @@ body * {
 }
 
 #about-me {
-  display: flex;
   position: relative;
   margin-top: var(--top-header-height);
   padding: 64px 24px;
@@ -59,7 +58,6 @@ body * {
 }
 
 #about-me h1 {
-  display: flex;
   flex-direction: column;
   font-size: 40px;
   margin: 0;
@@ -68,7 +66,6 @@ body * {
 #about-me h1 span {
   line-height: 52px;
   font-weight: 700;
-  align-self: center;
   text-align: center;
 }
 
@@ -82,7 +79,6 @@ body * {
 }
 
 #about-me .social-links {
-  align-self: center;
   margin: 58px 0;
 }
 
@@ -103,4 +99,17 @@ body * {
 
 .green-text {
   color: var(--theme-green-color);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.self-center {
+  align-self: center;
 }
