@@ -1,0 +1,117 @@
+:root {
+  --top-header-height: 48px;
+  --default-font-family: 'inter', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif;
+  --theme-green-color: #36b37e;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body * {
+  font-family: var(--default-font-family);
+}
+
+.top-header {
+  position: fixed;
+  height: var(--top-header-height);
+  background: #fff;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 24px;
+  z-index: 999;
+}
+
+.top-header .header-title {
+  color: #28352f;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.mobile-nav-trigger {
+  border: 0 solid transparent;
+  background-color: transparent;
+  height: 24px;
+  padding: 8px;
+  max-height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+#about-me {
+  position: relative;
+  margin-top: var(--top-header-height);
+  padding: 64px 24px;
+  flex-direction: column;
+  min-height: calc(100vh - (var(--top-header-height) + 130px));
+  background-image: url('../images/header-illsutration-mobile.svg'), url('../images/header-illsutration-mobile@2x.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#about-me h1 {
+  flex-direction: column;
+  font-size: 40px;
+  margin: 0;
+}
+
+#about-me h1 span {
+  line-height: 52px;
+  font-weight: 700;
+  text-align: center;
+}
+
+#about-me p {
+  line-height: 28px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 400;
+  color: #172b4d;
+  margin-top: 58px;
+}
+
+#about-me .social-links {
+  margin: 58px 0;
+  list-style-type: none;
+  padding: 0;
+}
+
+#about-me .social-links a {
+  margin: 0 10px;
+}
+
+.continue-to-bottom {
+  position: absolute;
+  bottom: 10px;
+  align-self: center;
+  border: 0 solid transparent;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/* General CSS */
+
+.green-text {
+  color: var(--theme-green-color);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.self-center {
+  align-self: center;
+}
