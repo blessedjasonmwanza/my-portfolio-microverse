@@ -37,8 +37,6 @@ body * {
 }
 
 .mobile-nav-trigger {
-  border: 0 solid transparent;
-  background-color: transparent;
   height: 24px;
   padding: 8px;
   max-height: 40px;
