@@ -4,6 +4,7 @@
   --theme-green-color: #36b37e;
   --recent-works-project-height: 474px;
   --recent-works-text-color: #3a4a42;
+  --card-bg-color: #ebf0ee;
 }
 
 body {
@@ -69,7 +70,7 @@ body * {
   text-align: center;
 }
 
-#about-me p {
+.about-me-description {
   line-height: 28px;
   font-size: 20px;
   text-align: center;
@@ -101,7 +102,7 @@ body * {
   flex-direction: column;
 }
 
-#my-recent-works .recent-works-heading {
+.section-title-heading {
   font-weight: 700;
   font-size: 40px;
   color: #172b4d;
@@ -110,30 +111,30 @@ body * {
   text-align: center;
 }
 
-.projects {
-  display: grid;
-  grid-template-areas: 'project';
-  row-gap: 24px;
-  padding: 10px 0;
+.column-section {
   margin-top: 62px;
 }
 
+.projects,
+#skill-categories {
+  display: grid;
+  row-gap: 24px;
+  padding: 10px 0;
+}
+
+.projects {
+  grid-template-areas: 'project';
+}
+
 .projects .project {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
   height: var(--recent-works-project-height);
-  border-radius: 8px;
-  overflow: hidden;
-  margin-bottom: 24px;
-  border: 1px solid #d0d9d4;
   padding-bottom: 24px;
 }
 
 .projects .project img {
-  background: #ebf0ee;
+  background: var(--card-bg-color);
   width: 100%;
-  height: calc(var(--recent-works-project-height) - 222px);
+  height: calc(var(--recent-works-project-height) - 252px);
 }
 
 .projects .project .description-info {
@@ -141,6 +142,7 @@ body * {
   margin: -8px;
   background: #ffff;
   border-radius: 8px 8px 0 0;
+  padding: 0 11px;
 }
 
 .projects .project .project-details {
@@ -150,6 +152,7 @@ body * {
   font-weight: 600;
   margin-top: 16px;
   text-align: center;
+  height: 57px;
 }
 
 .projects .project .project-languages {
@@ -160,7 +163,7 @@ body * {
 
 .projects .project .project-languages li {
   border-radius: 4px;
-  background: #ebf0ee;
+  background: var(--card-bg-color);
   padding: 8px 12px;
   margin: 0 8px;
   letter-spacing: 0.03em;
@@ -168,9 +171,10 @@ body * {
   font-size: 12px;
   line-height: 16px;
   list-style-type: none;
+  white-space: nowrap;
 }
 
-.projects .project .action-btn {
+.action-btn {
   background: #36b37f;
   text-decoration: none;
   font-size: 17px;
@@ -188,6 +192,63 @@ body * {
   width: 48px;
   border: 2px solid var(--theme-green-color);
   border-radius: 24px;
+}
+
+#about-me-section {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 24px;
+  background-image: url('../images/illustration-1-about-me-mobile.svg'), url('../images/illustration-2-about-me-mobile.svg');
+  background-position: top right, bottom left;
+  background-repeat: no-repeat;
+}
+
+#about-me-section .about-me-description {
+  margin-top: 0;
+  padding-bottom: 24px;
+}
+
+#skill-categories {
+  grid-template-areas: 'skill-category';
+  list-style-type: none;
+}
+
+#skill-categories .skill-category {
+  height: 352px;
+  background: var(--card-bg-color);
+}
+
+#skill-categories .skill-category .skill-icon {
+  display: inline-flex;
+  background: #fff;
+  width: 80px;
+  height: 80px;
+  min-height: 80px;
+  border-radius: 50%;
+  margin: 40px 0;
+  box-shadow: 0 16px 24px rgba(37, 47, 137, 0.08);
+}
+
+#skill-categories .skill-category .skill-title {
+  color: #344563;
+  margin: 24px 0;
+}
+
+#skill-categories .skill-category .skill-stack {
+  list-style-type: none;
+  padding: 0;
+  flex-flow: row wrap;
+}
+
+#skill-categories .skill-category .skill-stack li {
+  padding: 12px;
+  white-space: normal;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  color: var(--theme-green-color);
+  margin: 8px;
 }
 
 /* General CSS */
@@ -211,4 +272,14 @@ body * {
 
 .self-center {
   align-self: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  border: 1px solid #d0d9d4;
 }
