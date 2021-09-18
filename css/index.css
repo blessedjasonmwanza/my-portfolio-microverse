@@ -68,13 +68,11 @@ body * {
 #about-me h1 span {
   line-height: 52px;
   font-weight: 700;
-  text-align: center;
 }
 
 .about-me-description {
   line-height: 28px;
   font-size: 20px;
-  text-align: center;
   font-weight: 400;
   color: #172b4d;
   margin-top: 58px;
@@ -109,7 +107,6 @@ body * {
   color: #172b4d;
   line-height: 52px;
   margin: 24px 0;
-  text-align: center;
 }
 
 .column-section {
@@ -152,7 +149,6 @@ body * {
   color: var(--recent-works-text-color);
   font-weight: 600;
   margin-top: 16px;
-  text-align: center;
   height: 57px;
 }
 
@@ -291,6 +287,9 @@ footer a.email {
 }
 
 /* General CSS */
+.center-text {
+  text-align: center;
+}
 
 .green-text {
   color: var(--theme-green-color);
@@ -318,9 +317,6 @@ footer a.email {
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 24px;
