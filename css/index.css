@@ -277,6 +277,10 @@ body * {
   height: 114px;
 }
 
+footer .social-links {
+  margin: 58px 0 20px 0;
+}
+
 footer a.email {
   text-decoration: none;
   font-size: 20px;
