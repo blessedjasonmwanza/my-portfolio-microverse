@@ -3,13 +3,14 @@
   --default-font-family: 'inter', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif;
   --theme-green-color: #36b37e;
   --recent-works-project-height: 474px;
-  --recent-works-text-color: #3a4a42;
+  --recent-works-text-color: hsl(150, 12%, 26%);
   --card-bg-color: #ebf0ee;
+  --card-border-color: #d0d9d4;
 }
 
 body {
   padding: 0 24px;
-  margin: 0;
+  margin: 0 auto;
 }
 
 body * {
@@ -79,13 +80,13 @@ body * {
   margin-top: 58px;
 }
 
-#about-me .social-links {
+.social-links {
   margin: 58px 0;
   list-style-type: none;
   padding: 0;
 }
 
-#about-me .social-links a {
+.social-links a {
   margin: 0 10px;
 }
 
@@ -175,6 +176,7 @@ body * {
 }
 
 .action-btn {
+  border: 0 solid transparent;
   background: #36b37f;
   text-decoration: none;
   font-size: 17px;
@@ -184,6 +186,7 @@ body * {
   border-radius: 4px;
   font-weight: 500;
   margin-top: 13px;
+  cursor: pointer;
 }
 
 .section-dash-splitter {
@@ -251,6 +254,38 @@ body * {
   margin: 8px;
 }
 
+#contact-me-form {
+  gap: 24px;
+}
+
+#contact-me-form > * {
+  border-radius: 4px;
+  outline: none;
+}
+
+#contact-me-form input {
+  border: 1px solid var(--card-border-color);
+  padding: 15px 16px;
+}
+
+#contact-me-form textarea {
+  border: 1px solid #60c095;
+  padding: 12px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  height: 114px;
+}
+
+footer a.email {
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 32px;
+  color: #42526e;
+  height: 189px;
+  justify-content: center;
+}
+
 /* General CSS */
 
 .green-text {
@@ -259,6 +294,10 @@ body * {
 
 .d-flex {
   display: flex;
+}
+
+.flex-cols {
+  flex-direction: column;
 }
 
 .d-inline-flex {
@@ -281,5 +320,5 @@ body * {
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 24px;
-  border: 1px solid #d0d9d4;
+  border: 1px solid var(--card-border-color);
 }
