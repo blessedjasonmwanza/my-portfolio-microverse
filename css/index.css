@@ -153,22 +153,24 @@ body * {
 }
 
 .projects .project .project-languages {
-  justify-content: space-evenly;
+  display: block;
   color: var(--recent-works-text-color);
   padding: 0;
+  margin: 0 auto;
 }
 
 .projects .project .project-languages li {
   border-radius: 4px;
   background: var(--card-bg-color);
   padding: 8px 12px;
-  margin: 0 8px;
+  margin: 8px;
   letter-spacing: 0.03em;
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
   list-style-type: none;
   white-space: nowrap;
+  float: left;
 }
 
 .action-btn {
