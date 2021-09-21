@@ -16,11 +16,11 @@
   </header>
   
   <section id="about-me" class="d-flex">
-    <h1 class="d-flex center-text">
-     <span class="self-center">Hey there. I’m Blessed</span>
-     <span class="green-text self-center">I’m a software developer</span>
+    <h1 class="d-flex">
+     <span class="self-center center-text">Hey there. I’m Blessed</span>
+     <span class="green-text self-center center-text">I’m a software developer</span>
     </h1>
-    <p class="about-me-description">
+    <p class="about-me-description  center-text">
       I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, 
       don’t hesitate to contact me.
     </p>
@@ -180,14 +180,15 @@
     </div>
   </section>
   
-  <form action="#" class="d-flex flex-cols" id="contact-me-form">
+  <form action="https://formspree.io/f/mbjqwpkj
+  " class="d-flex flex-cols" id="contact-me-form" method="POST">
     <p class="section-title-heading  center-text">
       I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.
     </p>
   
-    <input type="text" name="full_name" placeholder="FUll name">
-    <input type="email" name="email" placeholder="Email address">
-    <textarea name="message"  cols="30" rows="10" placeholder="Enter Text here"></textarea>
+    <input type="text" name="full_name" placeholder="Full name" maxlength="30" required>
+    <input type="email" name="email" placeholder="Email address" required>
+    <textarea name="message"  cols="30" rows="10" placeholder="Enter Text here" maxlength="500" required></textarea>
     <button type="submit" class="action-btn self-center">
       Get in touch
     </button>

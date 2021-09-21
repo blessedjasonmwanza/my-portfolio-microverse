@@ -73,9 +73,9 @@ body * {
 .about-me-description {
   line-height: 28px;
   font-size: 20px;
-  font-weight: 400;
   color: #172b4d;
   margin-top: 58px;
+  font-weight: 500;
 }
 
 .social-links {
@@ -185,11 +185,20 @@ body * {
   cursor: pointer;
 }
 
+.action-btn:hover {
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+}
+
+.action-btn:focus {
+  background: #008552;
+}
+
 .section-dash-splitter {
   display: block;
   clear: both;
   width: 48px;
-  border: 2px solid var(--theme-green-color);
+  border: 0 solid transparent;
+  border-bottom: 4px solid var(--theme-green-color);
   border-radius: 24px;
 }
 
