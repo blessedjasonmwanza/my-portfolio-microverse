@@ -8,6 +8,11 @@
   --card-border-color: #d0d9d4;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 body {
   padding: 0 24px;
   margin: 0 auto;
@@ -57,7 +62,6 @@ body * {
   margin-top: var(--top-header-height);
   padding: 64px 0;
   flex-direction: column;
-  min-height: calc(100vh - (var(--top-header-height) + 130px));
   background-image: url('../images/header-illsutration-mobile.svg'), url('../images/header-illsutration-mobile@2x.svg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -391,5 +395,32 @@ footer a.email {
 
   .continue-to-bottom {
     bottom: 400px;
+  }
+
+  .projects,
+  #skill-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .projects > *,
+  #skill-categories > .skill-category {
+    flex-basis: 367px;
+    flex-shrink: 1;
+    margin: 16px 24px;
+  }
+
+  #about-me-section .about-me-description {
+    width: 710px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .section-title-heading br,
+  .section-dash-splitter {
+    display: none;
   }
 }
