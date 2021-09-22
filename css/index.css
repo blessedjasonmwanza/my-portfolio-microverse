@@ -107,7 +107,6 @@ body * {
 
 #my-recent-works {
   flex-direction: column;
-  padding-top: 64px;
 }
 
 .section-title-heading {
@@ -116,6 +115,7 @@ body * {
   color: #172b4d;
   line-height: 52px;
   margin: 24px 0;
+  padding-top: 64px;
 }
 
 .column-section {
@@ -268,7 +268,8 @@ body * {
   margin: 8px;
 }
 
-#contact-me-form {
+#contact-me-form,
+.message-fields {
   gap: 24px;
 }
 
@@ -277,18 +278,22 @@ body * {
   outline: none;
 }
 
-#contact-me-form input {
+#contact-me-form .message-fields input {
   border: 1px solid var(--card-border-color);
   padding: 15px 16px;
+  outline: none;
+  border-radius: 4px;
 }
 
-#contact-me-form textarea {
+#contact-me-form .message-fields textarea {
+  outline: none;
   border: 1px solid #60c095;
   padding: 12px;
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
   height: 114px;
+  border-radius: 4px;
 }
 
 footer .social-links {
@@ -422,5 +427,26 @@ footer a.email {
   .section-title-heading br,
   .section-dash-splitter {
     display: none;
+  }
+
+  #contact-me-form {
+    padding: 100px  45px 225px 45px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-image: url('../images/illustration-1-contact-form-desktop.svg'), url('../images/illustration-2-contact-form-desktop@2x.svg'), url('../images/contact-form-illustratoin-3-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: bottom left, 274.15px calc(100% - 84.15px), 106% 100%;
+  }
+
+  #contact-me-form .section-title-heading {
+    padding: 0;
+  }
+
+  #contact-me-form .message-fields {
+    gap: 15px;
+  }
+
+  #contact-me-form .message-fields textarea::placeholder {
+    color: #172b4d;
   }
 }
