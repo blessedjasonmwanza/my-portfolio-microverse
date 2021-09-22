@@ -331,3 +331,26 @@ footer a.email {
   margin-bottom: 24px;
   border: 1px solid var(--card-border-color);
 }
+
+/* DESKTOP VERSION */
+
+@media screen and (min-width: 992px) {
+  .top-header .header-title,
+  .mobile-nav-trigger {
+    display: none;
+  }
+
+  .top-header {
+    justify-content: center;
+  }
+
+  .top-header .desktop-nav-menu a {
+    margin: 0 8px;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: #344563;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
