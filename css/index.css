@@ -349,6 +349,10 @@ footer a.email {
     justify-content: center;
   }
 
+  .top-header .desktop-nav-menu {
+    display: block;
+  }
+
   .top-header .desktop-nav-menu a {
     margin: 0 8px;
     padding: 10px 12px;
