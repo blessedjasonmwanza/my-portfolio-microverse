@@ -40,6 +40,10 @@ body * {
   text-decoration: none;
 }
 
+.top-header .desktop-nav-menu {
+  display: none;
+}
+
 .mobile-nav-trigger {
   height: 24px;
   padding: 8px;
@@ -99,6 +103,7 @@ body * {
 
 #my-recent-works {
   flex-direction: column;
+  padding-top: 64px;
 }
 
 .section-title-heading {
@@ -352,5 +357,35 @@ footer a.email {
     font-weight: 600;
     font-size: 15px;
     line-height: 20px;
+  }
+
+  #about-me {
+    background-image: url('../images/Header-llustration-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: calc(132px + var(--top-header-height));
+    height: 756px;
+  }
+
+  #about-me h1 {
+    font-weight: 800;
+    font-size: 48px;
+    text-align: center;
+    letter-spacing: 0.37px;
+  }
+
+  #about-me h1 span {
+    line-height: 60px;
+  }
+
+  #about-me .about-me-description {
+    width: 761px;
+    align-self: center;
+    margin: 24px 0;
+    line-height: 32px;
+  }
+
+  .continue-to-bottom {
+    bottom: 400px;
   }
 }
