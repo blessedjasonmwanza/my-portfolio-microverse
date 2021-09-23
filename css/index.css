@@ -349,6 +349,11 @@ footer a.email {
 /* DESKTOP VERSION */
 
 @media screen and (min-width: 992px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
   .top-header .header-title,
   .mobile-nav-trigger {
     display: none;
@@ -416,6 +421,14 @@ footer a.email {
     margin: 16px 24px;
   }
 
+  #skill-categories > .skill-category {
+    flex-basis: 352px;
+  }
+
+  #about-me-section {
+    background-image: url('../images/illustration-about-me-1-desktop@2x.svg'), url('../images/illustration-about-me-2-desktop@2x.svg');
+  }
+
   #about-me-section .about-me-description {
     width: 710px;
     margin: 0 auto;
@@ -432,21 +445,49 @@ footer a.email {
   #contact-me-form {
     padding: 100px  45px 225px 45px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 45% 55%;
     background-image: url('../images/illustration-1-contact-form-desktop.svg'), url('../images/illustration-2-contact-form-desktop@2x.svg'), url('../images/contact-form-illustratoin-3-desktop.svg');
     background-repeat: no-repeat;
-    background-position: bottom left, 274.15px calc(100% - 84.15px), 106% 100%;
+    background-position: bottom left, 274.15px calc(100% - 84.15px), bottom right;
+    margin: 0;
   }
 
   #contact-me-form .section-title-heading {
-    padding: 0;
+    padding: 0 50px 0 60px;
+    font-size: 30px;
+    line-height: 52px;
   }
 
   #contact-me-form .message-fields {
     gap: 15px;
+    padding-right: 70px;
   }
 
   #contact-me-form .message-fields textarea::placeholder {
     color: #172b4d;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 500;
+    font-family: var(--default-font-family);
+  }
+
+  footer .email {
+    display: none;
+  }
+
+  #contact-me-form .message-fields .action-btn {
+    align-self: flex-start;
+  }
+
+  footer {
+    width: 98.8vw;
+    max-height: 50px;
+    padding: 26px 0;
+    border-top: 1px solid #dfe1e6;
+    margin-left: -24px;
+  }
+
+  footer .social-links {
+    margin: 0;
   }
 }
