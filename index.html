@@ -13,6 +13,11 @@
     <nav class="mobile-nav-trigger d-flex flex-center">
       <img src="images/Union.png" alt="">
     </nav>
+    <nav class="desktop-nav-menu">
+      <a href="#my-recent-works">Portfolio</a>
+      <a href="#about-me-section">About</a>
+      <a href="#contact-me-form">Contact</a>
+    </nav>
   </header>
   
   <section id="about-me" class="d-flex">
@@ -50,6 +55,21 @@
     <h2 class="self-center section-title-heading  center-text">My Recent <br> Works</h2>
     <hr class="section-dash-splitter">
     <div class="projects column-section">
+      <section class="card d-flex flex-cols project">
+        <img src="images/Img-plaholder.png" alt="">
+        <div class="d-flex description-info">
+          <h3 class="project-details center-text self-center">
+            Multi-Post Stories <br>Gain+Glory
+          </h3>
+          <ul class="project-languages d-flex flex-center">
+            <li>Ruby on rails</li>
+            <li>css</li>
+            <li>JavaScript</li>
+            <li>html</li>
+          </ul>
+          <a href="#" class="action-btn self-center">See project</a>
+        </div>
+      </section>
       <section class="card d-flex flex-cols project">
         <img src="images/Img-plaholder.png" alt="">
         <div class="d-flex description-info">
@@ -180,18 +200,19 @@
     </div>
   </section>
   
-  <form action="https://formspree.io/f/mbjqwpkj
-  " class="d-flex flex-cols" id="contact-me-form" method="POST">
+  <form action="https://formspree.io/f/mbjqwpkj" class="d-flex flex-cols" id="contact-me-form" method="POST">
     <p class="section-title-heading  center-text">
       I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.
     </p>
   
-    <input type="text" name="full_name" placeholder="Full name" maxlength="30" required>
-    <input type="email" name="email" placeholder="Email address" required>
-    <textarea name="message"  cols="30" rows="10" placeholder="Enter Text here" maxlength="500" required></textarea>
-    <button type="submit" class="action-btn self-center">
-      Get in touch
-    </button>
+    <span class="message-fields  d-flex flex-cols">
+      <input type="text" name="full_name" placeholder="Full name" maxlength="30" required>
+      <input type="email" name="email" placeholder="Email address" required>
+      <textarea name="message"  cols="30" rows="10" placeholder="Enter Text here" maxlength="500" required></textarea>
+      <button type="submit" class="action-btn self-center">
+        Get in touch
+      </button>
+    </span>
   </form>
 
   <footer class="d-flex flex-cols">

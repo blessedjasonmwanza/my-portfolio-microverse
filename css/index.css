@@ -8,6 +8,11 @@
   --card-border-color: #d0d9d4;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 body {
   padding: 0 24px;
   margin: 0 auto;
@@ -40,6 +45,10 @@ body * {
   text-decoration: none;
 }
 
+.top-header .desktop-nav-menu {
+  display: none;
+}
+
 .mobile-nav-trigger {
   height: 24px;
   padding: 8px;
@@ -53,7 +62,6 @@ body * {
   margin-top: var(--top-header-height);
   padding: 64px 0;
   flex-direction: column;
-  min-height: calc(100vh - (var(--top-header-height) + 130px));
   background-image: url('../images/header-illsutration-mobile.svg'), url('../images/header-illsutration-mobile@2x.svg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -107,6 +115,7 @@ body * {
   color: #172b4d;
   line-height: 52px;
   margin: 24px 0;
+  padding-top: 64px;
 }
 
 .column-section {
@@ -259,7 +268,8 @@ body * {
   margin: 8px;
 }
 
-#contact-me-form {
+#contact-me-form,
+.message-fields {
   gap: 24px;
 }
 
@@ -268,18 +278,22 @@ body * {
   outline: none;
 }
 
-#contact-me-form input {
+#contact-me-form .message-fields input {
   border: 1px solid var(--card-border-color);
   padding: 15px 16px;
+  outline: none;
+  border-radius: 4px;
 }
 
-#contact-me-form textarea {
+#contact-me-form .message-fields textarea {
+  outline: none;
   border: 1px solid #60c095;
   padding: 12px;
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
   height: 114px;
+  border-radius: 4px;
 }
 
 footer .social-links {
@@ -330,4 +344,150 @@ footer a.email {
   overflow: hidden;
   margin-bottom: 24px;
   border: 1px solid var(--card-border-color);
+}
+
+/* DESKTOP VERSION */
+
+@media screen and (min-width: 992px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .top-header .header-title,
+  .mobile-nav-trigger {
+    display: none;
+  }
+
+  .top-header {
+    justify-content: center;
+  }
+
+  .top-header .desktop-nav-menu {
+    display: block;
+  }
+
+  .top-header .desktop-nav-menu a {
+    margin: 0 8px;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: #344563;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  #about-me {
+    background-image: url('../images/Header-llustration-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: calc(132px + var(--top-header-height));
+    height: 756px;
+  }
+
+  #about-me h1 {
+    font-weight: 800;
+    font-size: 48px;
+    text-align: center;
+    letter-spacing: 0.37px;
+  }
+
+  #about-me h1 span {
+    line-height: 60px;
+  }
+
+  #about-me .about-me-description {
+    width: 761px;
+    align-self: center;
+    margin: 24px 0;
+    line-height: 32px;
+  }
+
+  .continue-to-bottom {
+    bottom: 400px;
+  }
+
+  .projects,
+  #skill-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .projects > *,
+  #skill-categories > .skill-category {
+    flex-basis: 367px;
+    flex-shrink: 1;
+    margin: 16px 24px;
+  }
+
+  #skill-categories > .skill-category {
+    flex-basis: 352px;
+  }
+
+  #about-me-section {
+    background-image: url('../images/illustration-about-me-1-desktop@2x.svg'), url('../images/illustration-about-me-2-desktop@2x.svg');
+  }
+
+  #about-me-section .about-me-description {
+    width: 710px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .section-title-heading br,
+  .section-dash-splitter {
+    display: none;
+  }
+
+  #contact-me-form {
+    padding: 100px  45px 225px 45px;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    background-image: url('../images/illustration-1-contact-form-desktop.svg'), url('../images/illustration-2-contact-form-desktop@2x.svg'), url('../images/contact-form-illustratoin-3-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: bottom left, 274.15px calc(100% - 84.15px), bottom right;
+    margin: 0;
+  }
+
+  #contact-me-form .section-title-heading {
+    padding: 0 50px 0 60px;
+    font-size: 30px;
+    line-height: 52px;
+  }
+
+  #contact-me-form .message-fields {
+    gap: 15px;
+    padding-right: 70px;
+  }
+
+  #contact-me-form .message-fields textarea::placeholder {
+    color: #172b4d;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 500;
+    font-family: var(--default-font-family);
+  }
+
+  footer .email {
+    display: none;
+  }
+
+  #contact-me-form .message-fields .action-btn {
+    align-self: flex-start;
+  }
+
+  footer {
+    width: 98.8vw;
+    max-height: 50px;
+    padding: 26px 0;
+    border-top: 1px solid #dfe1e6;
+    margin-left: -24px;
+  }
+
+  footer .social-links {
+    margin: 0;
+  }
 }
