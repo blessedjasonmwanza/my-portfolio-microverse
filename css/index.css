@@ -43,6 +43,7 @@ body * {
   font-size: 20px;
   cursor: pointer;
   text-decoration: none;
+  animation: welcome 4s ease-in-out 0s 3 normal none;
 }
 
 .top-header .desktop-nav-menu {
@@ -355,6 +356,9 @@ footer a.email {
   animation-name: heart-pulse;
 }
 
+.animate-shadow:hover {
+  animation: animate-shadow 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;}
+
 @keyframes heart-pulse {
   from {
     font-size: 100%;
@@ -364,6 +368,49 @@ footer a.email {
     font-size: 120%;
   }
 }
+
+@keyframes welcome {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes animate-shadow {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translateZ(50px);
+            transform: translateZ(50px);
+    -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+  }
+}
+@keyframes animate-shadow {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translateZ(50px);
+            transform: translateZ(50px);
+    -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+  }
+}
+
 
 /* DESKTOP VERSION */
 
