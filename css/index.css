@@ -346,6 +346,25 @@ footer a.email {
   border: 1px solid var(--card-border-color);
 }
 
+/* Animations */
+
+.animate-pulse {
+  animation-duration: 0.75s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-name: heart-pulse;
+}
+
+@keyframes heart-pulse {
+  from {
+    font-size: 100%;
+  }
+
+  to {
+    font-size: 120%;
+  }
+}
+
 /* DESKTOP VERSION */
 
 @media screen and (min-width: 992px) {
