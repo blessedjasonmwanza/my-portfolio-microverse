@@ -4,14 +4,19 @@
 
 > This is my first mobile version Portfolio Project built under Microverse program.
 
-![my-portfolio-screenshot-mobile](https://user-images.githubusercontent.com/35315311/133474148-39812177-e3e1-4cb6-94d7-467a19c44f65.png)
+![my-portfolio-screenshot desktop](./images/website-preview.png)
 
 
 ## Built With
 
 - HTML
 - CSS
-- 
+
+## Live Demo
+
+[Click here to view Live website Demo](https://blessedjasonmwanza.github.io/my-portfolio-microverse/)
+
+
 ## Getting Started
 If you want a copy of this file go to the [GitHub repository](https://github.com/blessedjasonmwanza/my-portfolio-microverse) and download it from the link below.
 - [My Microverse Project](git@github.com:blessedjasonmwanza/my-portfolio-microverse.git)
