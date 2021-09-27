@@ -11,7 +11,12 @@
 
 - HTML
 - CSS
-- 
+
+## Live Demo
+
+[Click here to view Live website Demo](https://blessedjasonmwanza.github.io/my-portfolio-microverse/)
+
+
 ## Getting Started
 If you want a copy of this file go to the [GitHub repository](https://github.com/blessedjasonmwanza/my-portfolio-microverse) and download it from the link below.
 - [My Microverse Project](git@github.com:blessedjasonmwanza/my-portfolio-microverse.git)
