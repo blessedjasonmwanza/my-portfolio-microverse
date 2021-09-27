@@ -4,7 +4,7 @@
 
 > This is my first mobile version Portfolio Project built under Microverse program.
 
-![my-portfolio-screenshot-mobile](https://user-images.githubusercontent.com/35315311/133474148-39812177-e3e1-4cb6-94d7-467a19c44f65.png)
+![my-portfolio-screenshot desktop](./images/website-preview.png)
 
 
 ## Built With
