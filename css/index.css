@@ -43,7 +43,6 @@ body * {
   font-size: 20px;
   cursor: pointer;
   text-decoration: none;
-  animation: welcome 4s ease-in-out 0s 3 normal none;
 }
 
 .top-header .desktop-nav-menu {
