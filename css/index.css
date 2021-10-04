@@ -481,9 +481,11 @@ footer a.email {
     font-weight: 600;
     font-size: 15px;
   }
+  
   .close-nav-wrapper {
     display: none;
   }
+
   #about-me {
     background-image: url('../images/Header-llustration-desktop.svg');
     background-repeat: no-repeat;
