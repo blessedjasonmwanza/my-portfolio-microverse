@@ -11,6 +11,7 @@
 html,
 body {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -53,7 +54,7 @@ body * {
   gap: 40px;
   position: fixed;
   top: 0;
-  bottom: 44px;
+  bottom: 0;
   right: 0;
   left: 0;
   padding: 24px;
@@ -399,7 +400,7 @@ footer a.email {
   }
 
   to {
-    font-size: 120%;
+    font-size: 110%;
   }
 }
 

@@ -11,6 +11,7 @@
 
 - HTML
 - CSS
+- JS
 
 ## Live Demo
 
