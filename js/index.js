@@ -1,4 +1,4 @@
-const recentWorksPopupData =[{
+const recentWorksPopupData = {
   coverImgMobile: 'images/project-popup.png',
   coverImgDesktop: 'images/project-img-desktop.png',
   title: 'Keeping track of hundreds of components',
@@ -7,58 +7,7 @@ const recentWorksPopupData =[{
   description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
   liveUrl: 'https://blessedjasonmwanza.github.io/my-portfolio-microverse/',
   sourceUrl: 'https://github.com/blessedjasonmwanza/my-portfolio-microverse',
-},
-
-{
-  coverImgMobile: 'images/project-popup.png',
-  coverImgDesktop: 'images/project-img-desktop.png',
-  title: 'Keeping track of hundreds of components',
-  languagesMobile: ['Ruby on rails', 'css', 'JavaScript'],
-  languagesDesktop: ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
-  description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-  liveUrl: 'https://blessedjasonmwanza.github.io/my-portfolio-microverse/',
-  sourceUrl: 'https://github.com/blessedjasonmwanza/my-portfolio-microverse',
-},
-{
-  coverImgMobile: 'images/project-popup.png',
-  coverImgDesktop: 'images/project-img-desktop.png',
-  title: 'Keeping track of hundreds of components',
-  languagesMobile: ['Ruby on rails', 'css', 'JavaScript'],
-  languagesDesktop: ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
-  description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-  liveUrl: 'https://blessedjasonmwanza.github.io/my-portfolio-microverse/',
-  sourceUrl: 'https://github.com/blessedjasonmwanza/my-portfolio-microverse',
-},
-{
-  coverImgMobile: 'images/project-popup.png',
-  coverImgDesktop: 'images/project-img-desktop.png',
-  title: 'Keeping track of hundreds of components',
-  languagesMobile: ['Ruby on rails', 'css', 'JavaScript'],
-  languagesDesktop: ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
-  description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-  liveUrl: 'https://blessedjasonmwanza.github.io/my-portfolio-microverse/',
-  sourceUrl: 'https://github.com/blessedjasonmwanza/my-portfolio-microverse',
-},
-{
-  coverImgMobile: 'images/project-popup.png',
-  coverImgDesktop: 'images/project-img-desktop.png',
-  title: 'Keeping track of hundreds of components',
-  languagesMobile: ['Ruby on rails', 'css', 'JavaScript'],
-  languagesDesktop: ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
-  description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-  liveUrl: 'https://blessedjasonmwanza.github.io/my-portfolio-microverse/',
-  sourceUrl: 'https://github.com/blessedjasonmwanza/my-portfolio-microverse',
-},
-{
-  coverImgMobile: 'images/project-popup.png',
-  coverImgDesktop: 'images/project-img-desktop.png',
-  title: 'Keeping track of hundreds of components',
-  languagesMobile: ['Ruby on rails', 'css', 'JavaScript'],
-  languagesDesktop: ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
-  description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-  liveUrl: 'https://blessedjasonmwanza.github.io/my-portfolio-microverse/',
-  sourceUrl: 'https://github.com/blessedjasonmwanza/my-portfolio-microverse',
-}];
+};
 
 function toggleOnMobile(elem) {
   if (window.innerWidth <= 992) {
@@ -88,17 +37,18 @@ function initPopupCloser() {
 function showPopup() {
   const popupWrapper = document.querySelector('#popup-wrapper');
   if (window.innerWidth <= 992) {
-    popupWrapper.innerHTML = `<section class="mobile-project-popup project-popup d-flex flex-cols">
+    let popup = `<section class="mobile-project-popup project-popup d-flex flex-cols">
         <img src="images/close-menu.png" class="close-popup" alt="close project preview"title="Close project preview" >
         <img src="${recentWorksPopupData.coverImgMobile}" class="popup-img" alt="Project placeholder">
         <h3 class="section-title-heading">
           ${recentWorksPopupData.title}
         </h3>
         <ul class="project-languages d-flex flex-center">
-          <li>Ruby on rails</li>
-          <li>css</li>
-          <li>JavaScript</li>
-        </ul>
+        `;
+    recentWorksPopupData.languagesMobile.forEach((language) => {
+      popup += `<li>${language}</li>`;
+    });
+    popup += `</ul>
         <p class="description">
           ${recentWorksPopupData.description}
         </p>
@@ -115,8 +65,9 @@ function showPopup() {
         </div>
       </section>
     `;
+    popupWrapper.innerHTML = popup;
   } else {
-    popupWrapper.innerHTML = `
+    let popup = `
       <div class="desktop-project-popup-wrapper">
           <section class="d-flex flex-cols popup-content">
             <span class="close-popup-wrapper close-popup">
@@ -140,12 +91,12 @@ function showPopup() {
               </div>
 
               <ul class="project-languages d-flex">
-                <li>Codekit</li>
-                <li>GitHub</li>
-                <li>JavaScript</li>
-                <li>Bootstrap</li>
-                <li>Terminal</li>
-                <li>Codepen</li>
+              `;
+    recentWorksPopupData.languagesDesktop.forEach((language) => {
+      popup += `<li>${language}</li>`;
+    });
+    popup += `</ul>
+              <p class="description">
               </ul>
               <p class="description">
                 ${recentWorksPopupData.description}
@@ -153,6 +104,7 @@ function showPopup() {
           </section>
         </div>
     `;
+    popupWrapper.innerHTML = popup;
   }
 }
 document.addEventListener('DOMContentLoaded', () => {
@@ -160,37 +112,60 @@ document.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('.desktop-nav-menu');
   const closeNavBtn = document.querySelector('.close-nav');
 
-  const recentWorksData = {
-    // total: 6,
-    data: {
+  const recentWorksData = [
+    {
       coverImg: 'images/Img-plaholder.png',
       title: 'Multi-Post Stories <br> Gain+Glory',
       languages: ['Ruby on rails', 'css', 'JavaScript', 'html'],
     },
-  };
+    {
+      coverImg: 'images/Img-plaholder.png',
+      title: 'Multi-Post Stories <br> Gain+Glory',
+      languages: ['Ruby on rails', 'css', 'JavaScript', 'html'],
+    },
+    {
+      coverImg: 'images/Img-plaholder.png',
+      title: 'Multi-Post Stories <br> Gain+Glory',
+      languages: ['Ruby on rails', 'css', 'JavaScript', 'html'],
+    },
+    {
+      coverImg: 'images/Img-plaholder.png',
+      title: 'Multi-Post Stories <br> Gain+Glory',
+      languages: ['Ruby on rails', 'css', 'JavaScript', 'html'],
+    },
+    {
+      coverImg: 'images/Img-plaholder.png',
+      title: 'Multi-Post Stories <br> Gain+Glory',
+      languages: ['Ruby on rails', 'css', 'JavaScript', 'html'],
+    },
+    {
+      coverImg: 'images/Img-plaholder.png',
+      title: 'Multi-Post Stories <br> Gain+Glory',
+      languages: ['Ruby on rails', 'css', 'JavaScript', 'html'],
+    },
+  ];
 
-  for (let totalWorks = 0; totalWorks<=recentWorksPopupData.length; totalWorks += 1) {
-    console.log(recentWorksData[totalWorks])
+  recentWorksData.forEach((project) => {
     let workCard = `
-      <section class="card d-flex flex-cols project">
-        <img src="${recentWorksData.data.coverImg}" class="project-img"  alt="${recentWorksData.data.title.replace('<br>', '')}">
-        <div class="d-flex description-info">
-          <h3 class="project-details center-text self-center">
-          ${recentWorksData.data.title}
-          </h3>
-          <ul class="project-languages d-flex flex-center">
-            `;
-    recentWorksData.data.languages.forEach((language) => {
+    <section class="card d-flex flex-cols project">
+      <img src="${project.coverImg}" class="project-img"  alt="${project.title.replace('<br>', '')}">
+      <div class="d-flex description-info">
+        <h3 class="project-details center-text self-center">
+        ${project.title}
+        </h3>
+        <ul class="project-languages d-flex flex-center">
+          `;
+    project.languages.forEach((language) => {
       workCard += `<li>${language}</li>`;
     });
     workCard += `
-          </ul>
-          <a href="#" class="action-btn self-center view-project">See project</a>
-        </div>
-      </section>
-    `;
+        </ul>
+        <a href="#" class="action-btn self-center view-project">See project</a>
+      </div>
+    </section>
+  `;
     document.querySelector('.projects').innerHTML += workCard;
-  }
+  });
   const seeProjectTriggers = document.querySelectorAll('.view-project');
   navTrigger.addEventListener('click', () => {
     toggleOnMobile(nav);
