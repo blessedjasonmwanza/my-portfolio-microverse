@@ -173,7 +173,7 @@ body * {
   padding-bottom: 24px;
 }
 
-.projects .project img {
+.projects .project .project-img {
   background: var(--card-bg-color);
   width: 100%;
   height: calc(var(--recent-works-project-height) - 252px);
@@ -196,13 +196,13 @@ body * {
   height: 57px;
 }
 
-.projects .project .project-languages {
+.project-languages {
   justify-content: space-evenly;
   color: var(--recent-works-text-color);
   padding: 0;
 }
 
-.projects .project .project-languages li {
+.project-languages li {
   border-radius: 4px;
   background: var(--card-bg-color);
   padding: 8px 12px;
@@ -213,6 +213,52 @@ body * {
   line-height: 16px;
   list-style-type: none;
   white-space: nowrap;
+}
+
+.project-popup .popup-img {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.project-popup .close-popup {
+  display: block;
+  z-index: 999;
+  position: fixed;
+  top: 38px;
+  right: 38px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.project-popup h3 {
+  margin-top: 12px;
+  padding-top: 0;
+}
+
+.description {
+  color: #344563;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.project-popup .description {
+  color: #344563;
+}
+
+.project-popup .action-btns {
+  width: 100%;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.project-popup .action-btns a.action-btn {
+  display: inline-flex;
+  padding: 12px 16px;
+  align-items: center;
+  align-content: center;
+  gap: 16px;
 }
 
 .action-btn {
@@ -331,6 +377,23 @@ body * {
   border-radius: 4px;
 }
 
+#popup-wrapper .project-popup {
+  position: fixed;
+  z-index: 999;
+  background: #fff;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+  padding: 16px;
+  align-items: flex-start;
+}
+
+#popup-wrapper .project-popup * {
+  transition: all 0.6s;
+}
+
 footer .social-links {
   margin: 58px 0 20px 0;
 }
@@ -379,6 +442,10 @@ footer a.email {
   overflow: hidden;
   margin-bottom: 24px;
   border: 1px solid var(--card-border-color);
+}
+
+.hidden-scrollbar::-webkit-scrollbar {
+  visibility: hidden;
 }
 
 /* Animations */
@@ -562,6 +629,15 @@ footer a.email {
     margin: 0;
   }
 
+  .desktop-project-popup-wrapper .popup-content .section-title-heading {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 560px;
+  }
+
   #contact-me-form .section-title-heading {
     padding: 0 50px 0 60px;
     font-size: 30px;
@@ -579,6 +655,73 @@ footer a.email {
     line-height: 24px;
     font-weight: 500;
     font-family: var(--default-font-family);
+  }
+
+  .desktop-project-popup-wrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    background: #c1c7d0fa;
+    padding: 112px 10%;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .desktop-project-popup-wrapper .popup-content {
+    background: #fff;
+    border: 1px solid #ebecf0;
+    box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
+    border-radius: 8px;
+    padding: 24px 16px;
+  }
+
+  .desktop-project-popup-wrapper .popup-content .close-popup-wrapper {
+    align-self: flex-end;
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  .desktop-project-popup-wrapper .popup-content .project-img-desktop {
+    margin-top: 14px;
+  }
+
+  .desktop-project-popup-wrapper .popup-content .title-section {
+    justify-content: space-between;
+  }
+
+  .desktop-project-popup-wrapper .popup-content .title-section .action-btns {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .desktop-project-popup-wrapper .popup-content .title-section .action-btns .action-btn {
+    display: inline-flex;
+    margin: 0 6px;
+    align-items: center;
+    align-content: center;
+  }
+
+  .desktop-project-popup-wrapper .popup-content .project-languages {
+    justify-content: flex-start;
+  }
+
+  .desktop-project-popup-wrapper .popup-content .project-languages li {
+    background: #ebecf0;
+    color: #344563;
+    letter-spacing: 0.03em;
+    line-height: 30px;
+  }
+
+  .desktop-project-popup-wrapper .popup-content .description {
+    color: #344563;
+  }
+
+  .mobile-project-popup {
+    display: none;
   }
 
   footer .email {
