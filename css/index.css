@@ -313,7 +313,7 @@ body * {
 }
 
 #skill-categories .skill-category {
-  height: 352px;
+  min-height: 352px;
   background: var(--card-bg-color);
 }
 
