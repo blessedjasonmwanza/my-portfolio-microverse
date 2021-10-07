@@ -189,15 +189,32 @@ document.addEventListener('DOMContentLoaded', () => {
       initPopupCloser();
     });
   });
+  const form = contactMeForm.elements;
+  let savedFormData = localStorage.getItem('formData');
+
+  if (savedFormData) {
+    savedFormData = JSON.parse(savedFormData);
+    form.full_name.value = savedFormData.fullName;
+    form.email.value = savedFormData.email;
+    form.message.value = savedFormData.message;
+  }
+
+  const contactFormData = {
+
+  };
 
   contactMeForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const visitorEmail = contactMeForm.elements.email.value;
     const errorMsgArea = document.querySelector('.error-msg');
     if (visitorEmail === visitorEmail.toLowerCase()) {
-      e.target.submit();
+      errorMsgArea.style.display = 'block';
+      errorMsgArea.style.color = 'green';
+      errorMsgArea.innerHTML = 'Form is valid and data has been saved.';
     } else {
       errorMsgArea.style.display = 'block';
+      errorMsgArea.innerHTML = 'Invalid email. Your email must be in lowercase.';
+      errorMsgArea.style.color = 'rgb(255, 69, 0)';
     }
   });
 });
