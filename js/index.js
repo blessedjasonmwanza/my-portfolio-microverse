@@ -190,22 +190,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   const form = contactMeForm.elements;
+  const formData = {
+    name: form.full_name.value,
+    email: form.email.value,
+    body: form.message.value,
+  };
   let savedFormData = localStorage.getItem('formData');
-
   if (savedFormData) {
     savedFormData = JSON.parse(savedFormData);
-    form.full_name.value = savedFormData.fullName;
+    form.full_name.value = savedFormData.name;
     form.email.value = savedFormData.email;
-    form.message.value = savedFormData.message;
+    form.message.value = savedFormData.body;
   }
-
-  const contactFormData = {};
   Array.from(form).forEach((element) => {
     element.addEventListener('change', () => {
-      contactFormData.fullName = form.full_name.value;
-      contactFormData.email = form.email.value;
-      contactFormData.message = form.message.value;
-      localStorage.setItem('formData', JSON.stringify(contactFormData));
+      formData.name = form.full_name.value;
+      formData.email = form.email.value;
+      formData.body = form.message.value;
+      localStorage.setItem('formData', JSON.stringify(formData));
     });
   });
 
