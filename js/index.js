@@ -189,15 +189,40 @@ document.addEventListener('DOMContentLoaded', () => {
       initPopupCloser();
     });
   });
+  const form = contactMeForm.elements;
+  const formData = {
+    name: form.full_name.value,
+    email: form.email.value,
+    body: form.message.value,
+  };
+  let savedFormData = localStorage.getItem('formData');
+  if (savedFormData) {
+    savedFormData = JSON.parse(savedFormData);
+    form.full_name.value = savedFormData.name;
+    form.email.value = savedFormData.email;
+    form.message.value = savedFormData.body;
+  }
+  Array.from(form).forEach((element) => {
+    element.addEventListener('change', () => {
+      formData.name = form.full_name.value;
+      formData.email = form.email.value;
+      formData.body = form.message.value;
+      localStorage.setItem('formData', JSON.stringify(formData));
+    });
+  });
 
   contactMeForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const visitorEmail = contactMeForm.elements.email.value;
     const errorMsgArea = document.querySelector('.error-msg');
     if (visitorEmail === visitorEmail.toLowerCase()) {
-      e.target.submit();
+      errorMsgArea.style.display = 'block';
+      errorMsgArea.style.color = 'green';
+      errorMsgArea.innerHTML = 'Form is valid and data has been saved.';
     } else {
       errorMsgArea.style.display = 'block';
+      errorMsgArea.innerHTML = 'Invalid email. Your email must be in lowercase.';
+      errorMsgArea.style.color = 'rgb(255, 69, 0)';
     }
   });
 });
