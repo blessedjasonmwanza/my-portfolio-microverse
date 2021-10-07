@@ -209,7 +209,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
- 
   contactMeForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const visitorEmail = contactMeForm.elements.email.value;
