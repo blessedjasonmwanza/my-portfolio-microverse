@@ -200,6 +200,7 @@ body * {
   justify-content: space-evenly;
   color: var(--recent-works-text-color);
   padding: 0;
+  flex-wrap: wrap !important;
 }
 
 .project-languages li {
@@ -312,7 +313,7 @@ body * {
 }
 
 #skill-categories .skill-category {
-  height: 352px;
+  min-height: 352px;
   background: var(--card-bg-color);
 }
 
@@ -442,6 +443,10 @@ footer a.email {
   overflow: hidden;
   margin-bottom: 24px;
   border: 1px solid var(--card-border-color);
+}
+
+.hidden-scrollbar {
+  overflow: hidden;
 }
 
 .hidden-scrollbar::-webkit-scrollbar {
@@ -707,6 +712,7 @@ footer a.email {
 
   .desktop-project-popup-wrapper .popup-content .project-languages {
     justify-content: flex-start;
+    flex-wrap: wrap;
   }
 
   .desktop-project-popup-wrapper .popup-content .project-languages li {
