@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navTrigger = document.querySelector('.mobile-nav-trigger');
   const nav = document.querySelector('.desktop-nav-menu');
   const closeNavBtn = document.querySelector('.close-nav');
-
+  const contactMeForm = document.querySelector('#contact-me-form');
   const recentWorksData = [
     {
       coverImg: 'images/Img-plaholder.png',
@@ -188,5 +188,16 @@ document.addEventListener('DOMContentLoaded', () => {
       showPopup();
       initPopupCloser();
     });
+  });
+
+  contactMeForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const visitorEmail = contactMeForm.elements.email.value;
+    const errorMsgArea = document.querySelector('.error-msg');
+    if (visitorEmail === visitorEmail.toLowerCase()) {
+      e.target.submit();
+    } else {
+      errorMsgArea.style.display = 'block';
+    }
   });
 });
