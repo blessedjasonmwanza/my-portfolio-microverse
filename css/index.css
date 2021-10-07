@@ -379,10 +379,9 @@ body * {
 }
 
 #contact-me-form .error-msg {
-  color: orangered;
+  color: rgb(255, 69, 0);
   display: none;
 }
-
 
 #popup-wrapper .project-popup {
   position: fixed;
