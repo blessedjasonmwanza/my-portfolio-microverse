@@ -199,10 +199,17 @@ document.addEventListener('DOMContentLoaded', () => {
     form.message.value = savedFormData.message;
   }
 
-  const contactFormData = {
+  const contactFormData = {};
+  Array.from(form).forEach((element) => {
+    element.addEventListener('change', () => {
+      contactFormData.fullName = form.full_name.value;
+      contactFormData.email = form.email.value;
+      contactFormData.message = form.message.value;
+      localStorage.setItem('formData', JSON.stringify(contactFormData));
+    });
+  });
 
-  };
-
+ 
   contactMeForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const visitorEmail = contactMeForm.elements.email.value;
