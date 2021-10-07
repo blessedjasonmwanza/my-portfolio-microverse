@@ -378,6 +378,12 @@ body * {
   border-radius: 4px;
 }
 
+#contact-me-form .error-msg {
+  color: orangered;
+  display: none;
+}
+
+
 #popup-wrapper .project-popup {
   position: fixed;
   z-index: 999;
