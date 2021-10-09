@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
       initPopupCloser();
     });
   });
-  const form = contactMeForm.elements;
+  const form = contactMeForm.ellements;
   const formData = {
     name: form.full_name.value,
     email: form.email.value,
