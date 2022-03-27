@@ -207,7 +207,7 @@ body * {
   border-radius: 4px;
   background: var(--card-bg-color);
   padding: 8px 12px;
-  margin: 0 8px;
+  margin: 5px 8px;
   letter-spacing: 0.03em;
   font-weight: 600;
   font-size: 12px;

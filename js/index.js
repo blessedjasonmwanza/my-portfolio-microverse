@@ -1,14 +1,3 @@
-const recentWorksPopupData = {
-  coverImgMobile: 'images/project-popup.png',
-  coverImgDesktop: 'images/project-img-desktop.png',
-  title: 'Keeping track of hundreds of components',
-  languagesMobile: ['Ruby on rails', 'css', 'JavaScript'],
-  languagesDesktop: ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
-  description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-  liveUrl: 'https://blessedjasonmwanza.github.io/my-portfolio-microverse/',
-  sourceUrl: 'https://github.com/blessedjasonmwanza/my-portfolio-microverse',
-};
-
 function toggleOnMobile(elem) {
   if (window.innerWidth <= 992) {
     const elemVisible = (elem.style.display.length > 0 && elem.style.display !== 'none');
@@ -34,7 +23,7 @@ function initPopupCloser() {
     });
   }
 }
-function showPopup() {
+function showPopup(recentWorksPopupData) {
   const popupWrapper = document.querySelector('#popup-wrapper');
   if (window.innerWidth <= 992) {
     let popup = `<section class="mobile-project-popup project-popup d-flex flex-cols">
@@ -83,10 +72,13 @@ function showPopup() {
                     See Live &nbsp;&nbsp;
                     <img src="images/see-source.png" alt="view live platform">
                   </a>
-                  <a href="${recentWorksPopupData.sourceUrl}" class="action-btn">
+                  ${
+                    recentWorksPopupData.sourceUrl == '#' ? 
+                    '' : `<a href="${recentWorksPopupData.sourceUrl}" class="action-btn">
                     See Source&nbsp;&nbsp;
                     <img src="images/Icon-GitHub.png" alt="See source on github">
-                  </a>
+                  </a>`
+                  }
                 </div>
               </div>
 
@@ -114,34 +106,76 @@ document.addEventListener('DOMContentLoaded', () => {
   const contactMeForm = document.querySelector('#contact-me-form');
   const recentWorksData = [
     {
-      coverImg: 'images/Img-plaholder.png',
-      title: 'Multi-Post Stories <br> Gain+Glory',
-      languages: ['Ruby on rails', 'css', 'JavaScript', 'html'],
+      coverImg: 'images/bravelender.png',
+      title: 'BraveLender Software',
+      languages: ['PHP', 'SQL', 'JavaScript', 'Jquery', 'HTML', 'CSS', 'FontAwesome'],
+      coverImgMobile: 'images/bravelender.png',
+      coverImgDesktop: 'images/bravelender.png',
+      languagesMobile: ['PHP', 'SQL', 'JavaScript', 'Jquery', 'HTML', 'CSS', 'FontAwesome'],
+      languagesDesktop: ['PHP', 'SQL', 'JavaScript', 'Jquery', 'HTML', 'CSS', 'FontAwesome'],
+      description: 'BraveLender Software is an advanced Cloud based Loan Accounting and Management CRM system helping financial servicing businesses automate their workflow through remote work, while extending their clientele base through a peer-to-peer network',
+      liveUrl: 'https://bravelender.com',
+      sourceUrl: '#',
     },
     {
-      coverImg: 'images/Img-plaholder.png',
-      title: 'Multi-Post Stories <br> Gain+Glory',
-      languages: ['Ruby on rails', 'css', 'JavaScript', 'html'],
+      coverImg: 'images/afrilending.png',
+      title: 'AfriLending Platform',
+      languages: ['ReactJS', 'PHP', 'SQL', 'JavaScript', 'HTML', 'CSS', 'FontAwesome'],
+      coverImgMobile: 'images/afrilending.png',
+      coverImgDesktop: 'images/afrilending.png',
+      languagesMobile: ['ReactJS', 'PHP', 'SQL', 'JavaScript', 'HTML', 'CSS', 'FontAwesome'],
+      languagesDesktop: ['ReactJS', 'PHP', 'SQL', 'JavaScript', 'HTML', 'CSS', 'FontAwesome'],
+      description: 'AfriLending is an Uber and Lyft for Cash. A Peer-to-Peer Platform that allows people to borrow money from hundreds of nearby lenders and directly transferred into their mobile money accounts.',
+      liveUrl: 'https://afrilending.com',
+      sourceUrl: '#',
     },
     {
-      coverImg: 'images/Img-plaholder.png',
-      title: 'Multi-Post Stories <br> Gain+Glory',
-      languages: ['Ruby on rails', 'css', 'JavaScript', 'html'],
+      coverImg: 'https://github.com/blessedjasonmwanza/accurate-stock-prices/raw/develop/screenshot.png',
+      title: 'Accurate Stock Prices',
+      languages: ['ReactJS', 'Redux', 'HTML', 'CSS', 'Heroku', 'Linters'],
+      coverImgMobile: 'https://github.com/blessedjasonmwanza/accurate-stock-prices/raw/develop/screenshot.png',
+      coverImgDesktop: 'https://github.com/blessedjasonmwanza/accurate-stock-prices/raw/develop/screenshot.png',
+      languagesMobile: ['ReactJS', 'Redux', 'HTML', 'CSS', 'Heroku', 'Linters'],
+      languagesDesktop: ['ReactJS', 'Redux', 'HTML', 'CSS', 'Heroku', 'Linters'],
+      description: 'View the most accurate financial data out there. This application provides financial statements in real time, every statements is audited, standardized, and up to date. Covering NYSE, NASDAQ, AMEX, EURONEXT, TSX, INDEXES, ETFs, MUTUAL FUNDS, FOREX and CRYPTO. View real time stock price, covering the fundamental data part of the stocks via providing income statement, balance sheet statement and cashflow statement quarterly and annually.',
+      liveUrl: 'https://accurate-stock-prices.herokuapp.com/',
+      sourceUrl: 'https://github.com/blessedjasonmwanza/accurate-stock-prices',
     },
     {
-      coverImg: 'images/Img-plaholder.png',
-      title: 'Multi-Post Stories <br> Gain+Glory',
-      languages: ['Ruby on rails', 'css', 'JavaScript', 'html'],
+      coverImg: 'https://github.com/blessedjasonmwanza/todo-list/raw/main/To-do-list.png',
+      title: 'To-Do List App',
+      languages: ['Vanilla JavaScript', 'Babel', 'WebPacks', 'APIs', 'HTML', 'CSS'],
+      coverImgMobile: 'https://github.com/blessedjasonmwanza/todo-list/raw/main/To-do-list.png',
+      coverImgDesktop: 'https://github.com/blessedjasonmwanza/todo-list/raw/main/To-do-list.png',
+      languagesMobile: ['ReactJS', 'JavaScript', 'Babel', 'WebPacks', 'APIs', 'HTML', 'CSS'],
+      languagesDesktop: ['ReactJS', 'JavaScript', 'Babel', 'WebPacks', 'APIs', 'HTML', 'CSS'],
+      description: 'Minimalistic Todo List Wep Application built with Pure JavaScript, HTML, CSS, Babel, and NPM Wepacks to help users easily keep track and manage their todo list activities.',
+      liveUrl: 'https://blessedjasonmwanza.github.io/todo-list/',
+      sourceUrl: 'https://github.com/blessedjasonmwanza/todo-list',
     },
     {
-      coverImg: 'images/Img-plaholder.png',
-      title: 'Multi-Post Stories <br> Gain+Glory',
-      languages: ['Ruby on rails', 'css', 'JavaScript', 'html'],
+      coverImg: 'https://github.com/blessedjasonmwanza/spacex-booking/raw/develop/screenshot.png',
+      title: 'Space Travelers\' Booking Hub',
+      languages: ['ReactJS', 'JavaScript', 'WebPack', 'Babel', 'HTML', 'CSS', 'Heroku', 'Linters'],
+      coverImgMobile: 'https://github.com/blessedjasonmwanza/spacex-booking/raw/develop/screenshot.png',
+      coverImgDesktop: 'https://github.com/blessedjasonmwanza/spacex-booking/raw/develop/screenshot.png',
+      languagesMobile: ['ReactJS', 'JavaScript', 'WebPack', 'Babel', 'HTML', 'CSS', 'Heroku', 'Linters'],
+      languagesDesktop: ['ReactJS', 'JavaScript', 'WebPack', 'Babel', 'HTML', 'CSS', 'Heroku', 'Linters'],
+      description: 'Working with the real live data from the SpaceX API. The application allows users to book rockets and join selected space missions. This web application is for a company that provides commercial and scientific space travel services.',
+      liveUrl: 'https://spacex-booking.herokuapp.com/',
+      sourceUrl: 'https://github.com/blessedjasonmwanza/spacex-booking',
     },
     {
-      coverImg: 'images/Img-plaholder.png',
-      title: 'Multi-Post Stories <br> Gain+Glory',
-      languages: ['Ruby on rails', 'css', 'JavaScript', 'html'],
+      coverImg: 'images/leaderboard.png',
+      title: 'Leaderboard Scores tracker',
+      languages: ['JavaScript', 'APIs', 'WebPack', 'Babel', 'HTML', 'CSS'],
+      coverImgMobile: 'images/leaderboard.png',
+      coverImgDesktop: 'images/leaderboard.png',
+      languagesMobile: ['JavaScript', 'APIs', 'WebPack', 'Babel', 'HTML', 'CSS'],
+      languagesDesktop: ['JavaScript', 'APIs', 'WebPack', 'Babel', 'HTML', 'CSS'],
+      description: 'Using external Leaderboard API, webpack, Gitflow, and ES6 features, notably modules to develop the leaderboard website that displays scores submitted by different players. It also allows you to submit your score.',
+      liveUrl: 'https://blessedjasonmwanza.github.io/leaderboard/',
+      sourceUrl: 'https://github.com/blessedjasonmwanza/leaderboard',
     },
   ];
 
@@ -181,11 +215,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  seeProjectTriggers.forEach((btn) => {
+  seeProjectTriggers.forEach((btn, index) => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       document.querySelector('body').classList.add('hidden-scrollbar');
-      showPopup();
+      showPopup(recentWorksData[index]);
       initPopupCloser();
     });
   });
